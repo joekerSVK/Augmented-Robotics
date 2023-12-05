@@ -1,0 +1,528 @@
+/* style.css */
+
+body {
+    font-family: 'Saira', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .container-fluid {
+        padding: 10px; /* Add padding for better readability on small screens */
+    }
+
+    /* Add more styles for smaller screens as needed */
+}
+
+.row {
+    background-image: url(Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img1 {
+    width: 100%;
+    height: 50vh; /* Choose a suitable height for your images */
+    object-fit: cover;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+.img1:hover {
+    background-color: #e1257A;
+}
+
+#text {
+    overflow: hidden;
+    border-right: .15em solid #e1257A; /* Adjust border color */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: typing 3s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+@media only screen and (max-width: 767px) {
+    #text {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #e1257A; /* Adjust border color */
+    }
+}
+
+.navbar {
+    font-size: 7vh;
+    background-image: url(Background.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+}
+
+/* Add these keyframes at the end of your style.css file */
+
+/* Keyframes for the header text */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for the header image */
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Keyframes for the navbar */
+@keyframes fadeInNavbar {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInVideo {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply keyframe animation to the video element */
+
+.video-container video {
+    animation: fadeInVideo 2s ease;
+}
+
+/* Apply keyframe animations to specific elements */
+
+#text {
+    animation: fadeInText 2s ease;
+}
+
+.img-fluid {
+    animation: fadeInImage 2s ease;
+}
+
+.navbar {
+    animation: fadeInNavbar 2s ease;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply keyframe animations to specific elements */
+
+.row {
+    animation: fadeInHeaderContent 2s ease;
+}
+
+#text {
+    animation: fadeInHeaderText 2s ease;
+}
+
+.img-fluid {
+    animation: fadeInMobilePhone 2s ease;
+}
+
+.video-container {
+    animation: fadeInVideoContainer 2s ease;
+}
+
+.flex-container {
+    animation: fadeInHeaderContent1 2s ease;
+}
+
+#text1 {
+    animation: fadeInHeaderText1 2s ease;
+}
+
+.img-fluid {
+    animation: fadeInMobilePhone1 2s ease;
+}
+
+.card {
+    animation: fadeInCard 2s ease;
+}
+
+@keyframes fadeInLeftWindow {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for the right window */
+@keyframes fadeInRightWindow {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply keyframe animations to specific elements */
+
+#left-window {
+    animation: fadeInLeftWindow 2s ease;
+}
+
+#right-window {
+    animation: fadeInRightWindow 2s ease;
+}
+
+.navbar a {
+    color: #fff6f6;
+}
+
+.header-content {
+    text-align: center;
+    padding: 3vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto; /* Set height to auto to maintain the aspect ratio */
+    object-fit: cover;
+    max-width: 100%; /* Ensure the image doesn't exceed its parent container */
+}
+
+.mobile-phone {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-phone img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 20vh;
+    z-index: 1;
+}
+
+.video-container {
+    position: absolute;
+    top: 11vh;
+    left: 31vh;
+    z-index: 0;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-primary {
+    background-color: #001f3f; /* Tmavomodrá farba pozadia */
+    color: #fff; /* Biela farba písma */
+    font-family: 'Saira', sans-serif; /* Písmo Saira */
+    text-transform: uppercase; /* Velké písmena */
+    font-weight: bold; /* Tučné písmo */
+}
+
+.btn-primary:hover {
+    background-color: #e1257A; /* Farba pozadia pri prechode myšou */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Existing styles... */
+
+.card {
+    width: 100%;
+    margin-bottom: 10vh;
+    background-color: #f8f3f3;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #e1257A;
+}
+
+.card-body {
+    background-color: #fff9f9;
+    transition: background-color 0.3s;
+}
+
+.card-body:hover {
+    background-color: #e1257A;
+}
+
+.header-content1 {
+    text-align: center;
+    padding: 3vh;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Saira', sans-serif;
+    font-size: 4vh; /* Adjust font size for mobile */
+}
+
+.uppercase-bold-text,
+.uppercase-bold-text1,
+.uppercase-bold-text2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Saira', sans-serif;
+}
+
+.uppercase-bold-text {
+    color: #0A006E;
+}
+
+.uppercase-bold-text1 {
+    color: #e1257A;
+}
+
+.uppercase-bold-text2 {
+    color: #ececec;
+    font-size: 3vh; /* Adjust font size for desktop */
+
+    /* Media query for screens with a maximum width of 767 pixels (typical for mobile devices) */
+    @media only screen and (max-width: 767px) {
+        font-size: 1vh; /* Adjust font size for mobile */
+    }
+}
+
+/* Media query for screens with a maximum width of 767 pixels (typical for mobile devices) */
+@media only screen and (max-width: 767px) {
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .card-title {
+        font-size: 1vh; /* Adjust font size for mobile */
+    }
+    .uppercase-bold-text1 {
+        font-size: 1vh; /* Adjust font size for mobile */
+    }
+    .uppercase-bold-text {
+        font-size: 1vh; /* Adjust font size for mobile */
+    }
+    .uppercase-bold-text2 {
+        font-size: 1vh; /* Adjust font size for mobile */
+    }
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-box {
+    text-transform: uppercase; /* Velké písmena */
+    font-weight: bold; /* Tučné písmo */
+    font-family: 'Saira', sans-serif; /* Písmo Saira */
+    color: #ececec; /* Farba textu */
+    font-size: 3vh;
+    text-align: center;
+    color: #0A006E;
+    flex-grow: 1;
+    padding: 5vh;
+    margin-right: 5vh;
+    background-color: #e8e3e3;
+    border:2px solid #0A006E; /* Adjust background color as needed */
+     /* Adjust border radius as needed */
+    width: 100vh;
+    height: 50vh; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInFooterContent 2s ease;
+}
+
+@keyframes fadeInFooterContent {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-box1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Saira', sans-serif;
+    color: #ececec;
+    font-size: 3vh;
+    text-align: center;
+    color: #0A006E;
+    flex-grow: 1;
+    padding: 5vh;
+    margin-right: 5vh;
+    background-color: #e8e3e3;
+    border: 2px solid #0A006E;
+    width: 100%;
+
+    /* Media query for screens with a maximum width of 767 pixels (typical for mobile devices) */
+    @media only screen and (max-width: 767px) {
+        font-size: 1vh; /* Adjust font size for mobile */
+        padding: 2vh; /* Adjust padding for mobile */
+        margin-right: 0; /* Remove margin for mobile */
+        height: auto; /* Adjust height for mobile */
+    }
+}
+
+.footer-box2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Saira', sans-serif;
+    color: #ececec;
+    font-size: 2vh;
+    text-align: center;
+    color: #0A006E;
+    flex-grow: 1;
+    padding: 5vh;
+    margin-right: 5vh;
+    background-color: #ffffff;
+
+    /* Media query for screens with a maximum width of 767 pixels (typical for mobile devices) */
+    @media only screen and (max-width: 767px) {
+        font-size: 1vh; /* Adjust font size for mobile */
+        padding: 2vh; /* Adjust padding for mobile */
+        margin-right: 0; /* Remove margin for mobile */
+        height: auto; /* Adjust height for mobile */
+    }
+}
+
+.footer-box ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box li {
+    margin-right: 2vh; /* Adjust the spacing between icons */
+}
+
+.footer-box img {
+    justify-content: center;
+    align-items: center;
+    width: 8vh; /* Adjust the width of the icons */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+@keyframes fadeInFooterBox {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the keyframe animation to the specific element */
+
+#footer-box2 {
+    animation: fadeInFooterBox 2s ease;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar {
+        font-size: 1.5rem; /* Adjust font size for mobile */
+    }
+
+    .header-content, .header-content1, .footer-box, .footer-box1, .footer-box2 {
+        padding: 2vh; /* Adjust padding for mobile */
+    }
+
+    /* Add more styles for smaller screens as needed */
+}
